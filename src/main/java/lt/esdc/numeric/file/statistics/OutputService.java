@@ -1,7 +1,8 @@
 package lt.esdc.numeric.file.statistics;
 
 public class OutputService {
-    public void print(Statistics stat) {
+    public void printStats(Statistics stat) {
 
     }
+
 }

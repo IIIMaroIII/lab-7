@@ -1,0 +1,67 @@
+Задание 2
+
+В символьном файле находится информация об N числах с плавающей запятой. Прочитать информацию из файла.
+Проверить на корректность, то есть являются ли числа числами.
+Преобразовать к числовым значениям и вычислить сумму и среднее значение прочитанных чисел.
+Записать в этот файл сумму и среднее значение.
+
+Создать собственный класс исключения.
+Предусмотреть обработку исключений:
+- возникающих при нехватке памяти,
+- отсутствии самого файла по заданному адресу,
+- отсутствии или некорректности требуемой записи в файле
+- недопустимом значении числа (выходящим за пределы максимально допустимых значений) и т.д.
+
+--------------- src/main/java/lt/esdc/numeric/file/statistics
+
+1) Программа — это процесс, состоящий из шагов.
+    1.1) Reader
+    1.2) Validator
+    1.3) Parser
+    1.4) Counter
+    1.5) Writer
+    1.6) NumericFileStatisticsException
+    1.7) Main
+    1.8) Statistics
+    1.9) OutputService
+2) Каждый шаг выполняется отдельным классом с одной ответственностью.
+    2.1) Методы либо успешно выполняются, либо бросают exception.
+    2.2) Validator либо возвращает void, либо бросает exception.
+3) Сервисы не хранят состояние и не ловят исключения, они либо успешно выполняются, либо сообщают об ошибке.
+4) Оркестратор (Main)
+    4.1) управляет потоком выполнения;
+    4.2) хранит временные данные;
+    4.3) принимает решения при ошибках;
+5) Custom Exception - должен представлять ошибку ТВОЕГО домена, а не переписывать уже СУЩЕСТВУЮЩИЕ.
+
+- public class Reader
+    - public <return type> readFromPath(Path p) {}
+    - public <return type> readFromScanner(Scanner sc) {}
+
+- public class Validator
+    - public void validateDouble(Double n) {
+        if(n == null) throw new <SomeException>("Double is null");
+    }
+    - public void validateDouble(Double n, int min, int max) {
+            if(n < min) throw new <SomeException>("Double has to be greater than " + min);
+            if(n > max) throw new <SomeException>("Double has to be less than " + max);
+        }
+    - public void validatePath(Path p) {
+        if(n == null) throw new <SomeException>
+    }
+- public class Parser
+    - public <return type> parseNumber(int n) {}
+
+- public class Counter
+    - public <return type> countAverage(int[] p) {}
+    - public <return type> countSum(int[] p) {}
+
+- public class Writer
+    -
+
+- public class NumericFileException extends Exception {}
+
+- public class Main (orchestration)
+
+
+

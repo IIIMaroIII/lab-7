@@ -1,0 +1,50 @@
+package lt.esdc.numeric.file.statistics;
+
+import java.nio.file.Path;
+
+public class FileProcessor {
+    private final Validator validator = new Validator();
+    private final Reader reader = new Reader();
+    private final Writer writer = new Writer();
+    private final Parser parser = new Parser();
+    private Path path;
+
+
+    public FileProcessor askFile() {
+        while (true) {
+            try {
+                System.out.println("⚠️ Important: file has to be at the project folder");
+                System.out.println("📂 Please enter a file name (file.txt, " + "file.md): ");
+                String userFileName = reader.readLine();
+                System.out.println("📂 Please enter a folder for a file if exists (press 'Enter' "
+                        + "if not) : ");
+                String userFileFolder = reader.readLine();
+                Path filePath = configurePath(userFileName, userFileFolder);
+                validator.validatePath(filePath);
+                this.path = filePath;
+                break;
+            } catch (NumericFileStatisticsException ex) {
+                System.err.println(ex.getMessage());
+                System.out.println("📣 Try again...");
+                continue;
+            }
+        }
+        return this;
+    }
+
+    public FileProcessor readFile() {
+
+    }
+
+    public Path getPath() {
+        return this.path;
+    }
+
+    public static Path configurePath(String fileName) {
+        return configurePath(fileName, "tasks");
+    }
+
+    public static Path configurePath(String fileName, String fileFolder) {
+        return Path.of(System.getProperty("user.dir")).resolve(fileFolder).resolve(fileName);
+    }
+}
