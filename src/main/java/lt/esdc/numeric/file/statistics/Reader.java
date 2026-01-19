@@ -1,5 +1,10 @@
 package lt.esdc.numeric.file.statistics;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Reader {
@@ -14,4 +19,14 @@ public class Reader {
         return this.sc.nextLine();
     }
 
+    public List<String> readAllLines(Path p) throws NumericFileStatisticsException {
+        try {
+            List<String> content = Files.readAllLines(p);
+            System.out.println("Heres a list: " + Arrays.toString(content.toArray()));
+            return content;
+        } catch (IOException ex) {
+            throw new NumericFileStatisticsException("Failed to read a file -> " + p + ex.getMessage());
+        }
+    }
 }
+
