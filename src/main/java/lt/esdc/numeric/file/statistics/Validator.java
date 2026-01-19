@@ -7,8 +7,13 @@ import java.util.List;
 
 
 public class Validator {
-    static void validateDouble(Double n) throws NumericFileStatisticsException {
-        if (n == null) throw new NumericFileStatisticsException("Value: " + n + " is null");
+    static void validateDouble(Double... nums) throws NumericFileStatisticsException {
+        for (Double one : nums) {
+            if (one == null) throw new NumericFileStatisticsException("Numeric value is null");
+            if (one.isNaN()) throw new NumericFileStatisticsException("Numeric value is NaN");
+            if (one.isInfinite())
+                throw new NumericFileStatisticsException("Numeric value is " + "infinite");
+        }
     }
 
     static void validatePath(Path p) throws NumericFileStatisticsException {

@@ -1,10 +1,6 @@
 package lt.esdc.numeric.file.statistics;
 
 public class OutputService {
-    public void printStats(Statistics stat) {
-
-    }
-
     static void printMenu() {
         System.out.println("===================================");
         System.out.println("============= M E N U =============");
@@ -15,5 +11,5 @@ public class OutputService {
         System.out.println("===================================");
         System.out.println("===================================");
     }
-    
+
 }

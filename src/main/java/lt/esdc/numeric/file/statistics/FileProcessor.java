@@ -3,6 +3,7 @@ package lt.esdc.numeric.file.statistics;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 public class FileProcessor {
@@ -44,15 +45,18 @@ public class FileProcessor {
         return new Statistics(totalSum, averageValue);
     }
 
-    public void writeResults(Statistics stats, String suffix, String ext) throws NumericFileStatisticsException {
+    public void writeResults(String suffix, String ext, String... args) throws NumericFileStatisticsException {
         Validator.validatePath(this.path);
-        if (suffix.strip().isBlank()) suffix = "_results";
-        if (ext.strip().isBlank()) ext = getFileNameExt(this.path);
+        Path newPath = createPathForNewFile(this.path, suffix, ext);
+        try {
 
-        String fileName = getFileNameWithoutExt(this.path);
-        String newName = fileName + suffix + "." + ext;
-        Path newPath = configurePath(newName);
-        System.out.println("NewPath: " + newPath);
+            Files.write(newPath, List.of(args), StandardOpenOption.CREATE,
+                    StandardOpenOption.APPEND);
+        } catch (IOException ex) {
+            throw new NumericFileStatisticsException("Unable to write results to -> " + newPath + ex.getMessage());
+        }
+
+
     }
 
     public Path getPath() {
@@ -67,12 +71,19 @@ public class FileProcessor {
         return Path.of(System.getProperty("user.dir")).resolve(fileFolder).resolve(fileName);
     }
 
-    static Path createNewFile(Path path, String newName, String ext) throws NumericFileStatisticsException {
+    public Path createPathForNewFile(Path path, String suffix, String ext) throws NumericFileStatisticsException {
         Validator.validatePath(path);
         try {
-            return Files.createFile(path);
+            if (suffix.strip().isBlank()) suffix = "_results";
+            if (ext.strip().isBlank()) ext = getFileNameExt(getPath());
+
+            String fileName = getFileNameWithoutExt(getPath());
+            String newName = fileName + suffix + ext;
+            Path newPath = configurePath(newName);
+            Files.deleteIfExists(newPath);
+            return newPath;
         } catch (IOException ex) {
-            throw new NumericFileStatisticsException("Unable to create new file at the -> " + path + ex.getMessage());
+            throw new NumericFileStatisticsException("Unable to create new file at the -> " + ex.getMessage());
         }
 
     }
@@ -92,6 +103,14 @@ public class FileProcessor {
         int indxOfDot = fullName.lastIndexOf(".");
         if (indxOfDot == -1) return fullName;
         return fullName.substring(indxOfDot);
+
+    }
+
+    static String configureDoubleString(double v, String str, int afterDot) throws NumericFileStatisticsException {
+        if (afterDot < 0 || afterDot > 4)
+            throw new NumericFileStatisticsException("Unacceptable " + "value after dot: " + afterDot);
+        Validator.validateString(str);
+        return String.format("⚡️ " + str + "%." + afterDot + "f%n", v);
 
     }
 
