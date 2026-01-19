@@ -21,7 +21,8 @@ public class Reader {
 
     public List<String> readAllLines(Path p) throws NumericFileStatisticsException {
         try {
-            List<String> content = Files.readAllLines(p);
+            List<String> content = Validator.skipEmptyRows(Files.readAllLines(p));
+            Validator.validateList(content);
             System.out.println("Heres a list: " + Arrays.toString(content.toArray()));
             return content;
         } catch (IOException ex) {

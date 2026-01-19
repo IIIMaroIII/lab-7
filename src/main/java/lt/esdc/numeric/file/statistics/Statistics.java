@@ -8,4 +8,12 @@ public class Statistics {
         this.doubleValuesSum = doubleValuesSum;
         this.doubleAverage = doubleAverage;
     }
+
+    public double getDoubleValuesSum() {
+        return doubleValuesSum;
+    }
+
+    public double getDoubleAverage() {
+        return doubleAverage;
+    }
 }

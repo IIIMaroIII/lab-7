@@ -5,7 +5,7 @@ public class OutputService {
 
     }
 
-    public void printMenu() {
+    static void printMenu() {
         System.out.println("===================================");
         System.out.println("============= M E N U =============");
         System.out.println("===================================");
@@ -15,5 +15,5 @@ public class OutputService {
         System.out.println("===================================");
         System.out.println("===================================");
     }
-
+    
 }
