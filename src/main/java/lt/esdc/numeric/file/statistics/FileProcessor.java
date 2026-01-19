@@ -49,7 +49,7 @@ public class FileProcessor {
         Validator.validatePath(this.path);
         Path newPath = createPathForNewFile(this.path, suffix, ext);
         try {
-
+            Files.copy(this.path, newPath);
             Files.write(newPath, List.of(args), StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND);
         } catch (IOException ex) {
