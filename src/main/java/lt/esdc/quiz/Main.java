@@ -16,6 +16,10 @@ public class Main {
                     case "2" -> fileProcessor.findFile("design_patterns.txt");
                     case "3" -> fileProcessor.findFile("general_science.txt");
                     case "4" -> fileProcessor.findFile("capitals.txt");
+                    case "5" -> fileProcessor.findFile("js.txt");
+                    case "6" -> fileProcessor.findFile("general.txt");
+                    case "7" -> fileProcessor.findFile("logic.txt");
+                    case "8" -> fileProcessor.findFile("phsyco.txt");
                     default -> System.exit(0);
                 }
 

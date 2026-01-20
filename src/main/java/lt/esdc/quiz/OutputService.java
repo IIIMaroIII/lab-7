@@ -13,6 +13,10 @@ public class OutputService {
         System.out.println("2. Design Patterns");
         System.out.println("3. General Science");
         System.out.println("4. World Capitals");
+        System.out.println("5. JavaScript");
+        System.out.println("6. General theme");
+        System.out.println("7. Логика и мышление (русский)");
+        System.out.println("8. Психология и мышление (русский)");
         System.out.println("0. Exit");
         System.out.println("============= Q U I Z =================");
         System.out.println("      🤓 Choose one by number 🤓");

@@ -1,0 +1,69 @@
+Q1: What is JavaScript primarily used for?
+A) Styling web pages
+B) Structuring web content
+C) Adding interactivity to web pages
+D) Managing databases
+ANSWER: C
+
+Q2: Which keyword is used to declare a variable with block scope?
+A) var
+B) let
+C) static
+D) global
+ANSWER: B
+
+Q3: What will typeof null return?
+A) "null"
+B) "object"
+C) "undefined"
+D) "boolean"
+ANSWER: B
+
+Q4: Which method converts a JSON string into a JavaScript object?
+A) JSON.stringify()
+B) JSON.convert()
+C) JSON.parse()
+D) JSON.object()
+ANSWER: C
+
+Q5: What is a closure in JavaScript?
+A) A function without parameters
+B) A function combined with its lexical environment
+C) A method inside a class
+D) A loop structure
+ANSWER: B
+
+Q6: Which value is considered falsy?
+A) "0"
+B) []
+C) 0
+D) {}
+ANSWER: C
+
+Q7: What does the === operator do?
+A) Compares values with type coercion
+B) Compares references only
+C) Compares values and types
+D) Assigns a value
+ANSWER: C
+
+Q8: Which array method creates a new array?
+A) push()
+B) pop()
+C) map()
+D) sort()
+ANSWER: C
+
+Q9: What does async/await simplify?
+A) DOM manipulation
+B) Error handling
+C) Asynchronous code execution
+D) Variable scoping
+ANSWER: C
+
+Q10: Which statement about JavaScript is TRUE?
+A) JavaScript is statically typed
+B) JavaScript runs only on servers
+C) JavaScript supports first-class functions
+D) JavaScript does not support objects
+ANSWER: C
