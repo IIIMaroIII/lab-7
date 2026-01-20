@@ -9,14 +9,11 @@ import java.util.List;
 
 public class FileProcessor {
     private final Reader reader = new Reader();
-    private final Writer writer = new Writer();
-    private final Parser parser = new Parser();
     private Path path;
 
     private String regexFindQuestion = "^Q\\d+:.+\\?$";
     private String regexFindAnswer = "^[A-Z]\\).+";
     private String regexFindCorrectAnswer = "^ANSWER:.+";
-    private int answersQuantity = 4;
 
     private List<String> questions = new ArrayList<>();
     private List<String> answers = new ArrayList<>();
@@ -33,10 +30,6 @@ public class FileProcessor {
 
     public List<String> getOnlyCorrectAnswers() {
         return this.correctAnswers;
-    }
-
-    public List<String> getFileContent() {
-        return this.fileContent;
     }
 
     public Path findFile(String fileName) throws QuizException {
@@ -93,18 +86,12 @@ public class FileProcessor {
         this.correctAnswers = clearQuestions;
     }
 
-    public void readFile() throws QuizException {
-        Validator.validatePath(this.path);
-        List<String> list = reader.readAllLines(this.path);
-        Validator.validateList(list);
-        this.fileContent = list;
-    }
-
-    public Statistics calculateContent() throws QuizException {
-        double totalSum = Counter.countSum(this.fileContent);
-        double averageValue = Counter.countAverage(this.fileContent);
-        return new Statistics(totalSum, averageValue);
-    }
+//    public void readFile() throws QuizException {
+//        Validator.validatePath(this.path);
+//        List<String> list = reader.readAllLines(this.path);
+//        Validator.validateList(list);
+//        this.fileContent = list;
+//    }
 
     public void writeResults(String suffix, String ext, String... args) throws QuizException {
         Validator.validatePath(this.path);
@@ -167,12 +154,5 @@ public class FileProcessor {
 
     }
 
-    static String configureDoubleString(double v, String str, int afterDot) throws QuizException {
-        if (afterDot < 0 || afterDot > 4)
-            throw new QuizException("Unacceptable " + "value after dot: " + afterDot);
-        Validator.validateString(str);
-        return String.format("⚡️ " + str + "%." + afterDot + "f%n", v);
-
-    }
 
 }
