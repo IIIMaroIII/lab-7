@@ -12,7 +12,10 @@ public class Parser {
 
     public static Double parseDouble(String str) throws NumericFileStatisticsException {
         try {
-            return Double.parseDouble(str);
+            double value = Double.parseDouble(str);
+            if (Double.isNaN(value) || Double.isInfinite(value))
+                throw new NumericFileStatisticsException("Double is out of range: " + str);
+            return value;
         } catch (NumberFormatException ex) {
             throw new NumericFileStatisticsException("String -> " + str + " isn't parsable to an "
                     + "integer " + ex.getMessage());

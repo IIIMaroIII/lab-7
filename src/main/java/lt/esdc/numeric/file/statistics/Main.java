@@ -11,6 +11,9 @@ public class Main {
                 System.err.println(ex.getMessage());
                 System.out.println("❓ Do you want to repeat?");
                 continue;
+            } catch (OutOfMemoryError err) {
+                System.err.println("❌ Not enough memory to complete the operation");
+                break;
             }
         }
 
