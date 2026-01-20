@@ -110,7 +110,7 @@ public class FileProcessor {
         Validator.validatePath(this.path);
         Path newPath = createPathForNewFile(this.path, suffix, ext);
         try {
-            Files.copy(this.path, newPath);
+//            Files.copy(this.path, newPath);
             Files.write(newPath, List.of(args), StandardOpenOption.CREATE,
                     StandardOpenOption.APPEND);
         } catch (IOException ex) {
@@ -134,18 +134,18 @@ public class FileProcessor {
 
     public Path createPathForNewFile(Path path, String suffix, String ext) throws QuizException {
         Validator.validatePath(path);
-        try {
-            if (suffix.strip().isBlank()) suffix = "_results";
-            if (ext.strip().isBlank()) ext = getFileNameExt(getPath());
+//        try {
+        if (suffix.strip().isBlank()) suffix = "_results";
+        if (ext.strip().isBlank()) ext = getFileNameExt(getPath());
 
-            String fileName = getFileNameWithoutExt(getPath());
-            String newName = fileName + suffix + ext;
-            Path newPath = configurePath(newName);
-            Files.deleteIfExists(newPath);
-            return newPath;
-        } catch (IOException ex) {
-            throw new QuizException("Unable to create new file at the -> " + ex.getMessage());
-        }
+        String fileName = getFileNameWithoutExt(getPath());
+        String newName = fileName + suffix + ext;
+        Path newPath = configurePath(newName);
+//            Files.deleteIfExists(newPath);
+        return newPath;
+//        } catch (IOException ex) {
+//            throw new QuizException("Unable to create new file at the -> " + ex.getMessage());
+//        }
 
     }
 

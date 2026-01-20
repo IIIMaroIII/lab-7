@@ -47,12 +47,12 @@ public class QuizFlow {
             System.out.print(formatLine("👉 Enter your answer (Aa,Bb,Cc,Dd): "));
             String userAnswer = reader.readLine();
             String rightAnswerAtCurrentIteration = this.correctAnswers.get(iteration - 1);
-            System.out.println("✅ Correct answer is: " + rightAnswerAtCurrentIteration);
+//            System.out.println("✅ Correct answer is: " + rightAnswerAtCurrentIteration);
             if (userAnswer.equalsIgnoreCase(rightAnswerAtCurrentIteration)) {
-                System.out.println(formatLine(" It is correct!!!", " 💥 ", 1));
+//                System.out.println(formatLine(" It is correct!!!", " 💥 ", 1));
                 this.rightAnswers++;
             } else {
-                System.out.println(formatLine(" Sorry, it is wrong!", " ❌ ", 1));
+//                System.out.println(formatLine(" Sorry, it is wrong!", " ❌ ", 1));
                 this.wrongAnswers++;
             }
             iteration++;
@@ -60,5 +60,13 @@ public class QuizFlow {
         }
         System.out.println("❌ Total wrong answers: " + this.wrongAnswers);
         System.out.println("✅ Total right answers: " + this.rightAnswers);
+    }
+
+    public int getRightAnswers() {
+        return this.rightAnswers;
+    }
+
+    public int getWrongAnswers() {
+        return this.wrongAnswers;
     }
 }

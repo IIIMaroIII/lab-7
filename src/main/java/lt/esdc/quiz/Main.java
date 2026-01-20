@@ -23,11 +23,18 @@ public class Main {
                 List<String> onlyQuestions = fileProcessor.getOnlyQuestions();
                 List<String> onlyAnswers = fileProcessor.getOnlyAnswers();
                 List<String> onlyCorrectAnswers = fileProcessor.getOnlyCorrectAnswers();
-//            OutputService.printList(onlyQuestions);
-//            OutputService.printList(onlyAnswers);
+
                 QuizFlow quizFlow = new QuizFlow(onlyQuestions, onlyAnswers, onlyCorrectAnswers);
                 quizFlow.start();
                 OutputService.printEndingQuiz();
+
+                String wrong =
+                        quizFlow.formatLine(" Total wrong answers: " + quizFlow.getWrongAnswers()
+                                , " ❌ ", 1);
+                String right =
+                        quizFlow.formatLine(" Total correct answers: " + quizFlow.getRightAnswers(), " ✅ ", 1);
+                fileProcessor.writeResults("", "", wrong, right);
+
                 String againChoice = reader.readLine();
                 if (againChoice.equalsIgnoreCase("0")) break;
                 continue;
