@@ -1,0 +1,104 @@
+Q1: What is the main purpose of the Java garbage collector?
+A) To delete unused variables manually
+B) To free memory by removing objects that are no longer reachable
+C) To optimize CPU performance
+D) To prevent memory leaks completely
+ANSWER: B
+
+Q2: Which statement about interfaces in Java is TRUE?
+A) Interfaces can have instance fields
+B) Interfaces can contain constructors
+C) Interfaces can have default methods
+D) Interfaces can extend classes
+ANSWER: C
+
+Q3: What happens if you override equals() but not hashCode()?
+A) Nothing, hashCode() is optional
+B) The program will not compile
+C) Hash-based collections may behave incorrectly
+D) equals() will be ignored
+ANSWER: C
+
+Q4: Which collection does NOT allow duplicate elements?
+A) List
+B) Map
+C) Set
+D) Queue
+ANSWER: C
+
+Q5: What is the result of calling compareTo()?
+A) true or false
+B) Only positive numbers
+C) -1, 0, or 1 depending on comparison
+D) An object reference
+ANSWER: C
+
+Q6: What is the main difference between checked and unchecked exceptions?
+A) Checked exceptions are faster
+B) Unchecked exceptions must be caught explicitly
+C) Checked exceptions are verified at compile time
+D) Unchecked exceptions cannot be thrown
+ANSWER: C
+
+Q7: Which keyword prevents a method from being overridden?
+A) static
+B) private
+C) final
+D) abstract
+ANSWER: C
+
+Q8: What does the "volatile" keyword guarantee?
+A) Atomicity of operations
+B) Visibility of changes across threads
+C) Thread safety of objects
+D) Faster execution
+ANSWER: B
+
+Q9: What is the main goal of the SOLID principles?
+A) To make code longer and more detailed
+B) To optimize memory usage
+C) To improve code maintainability and flexibility
+D) To reduce compilation time
+ANSWER: C
+
+Q10: What happens if a class implements two interfaces with the same default method?
+A) The compiler chooses one automatically
+B) A runtime exception is thrown
+C) The class must override the method
+D) The program will not compile
+ANSWER: C
+
+Q11: What is the primary purpose of the equals() method?
+A) To compare object references
+B) To compare object contents logically
+C) To copy object values
+D) To generate a hash code
+ANSWER: B
+
+Q12: Which principle states that a class should have only one reason to change?
+A) Open/Closed Principle
+B) Liskov Substitution Principle
+C) Single Responsibility Principle
+D) Dependency Inversion Principle
+ANSWER: C
+
+Q13: What is the main advantage of using immutability?
+A) Faster execution
+B) Reduced memory usage
+C) Thread safety and predictability
+D) Easier syntax
+ANSWER: C
+
+Q14: What does the keyword "transient" indicate?
+A) The variable cannot be changed
+B) The variable is temporary in memory only
+C) The variable will not be serialized
+D) The variable is shared between threads
+ANSWER: C
+
+Q15: What happens when an exception is thrown but not caught?
+A) The program continues normally
+B) The JVM ignores it
+C) The program terminates after stack trace output
+D) The exception is automatically retried
+ANSWER: C

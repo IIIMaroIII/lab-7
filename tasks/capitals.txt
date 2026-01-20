@@ -1,0 +1,69 @@
+Q1: What is the capital of Japan?
+A) Kyoto
+B) Osaka
+C) Tokyo
+D) Hiroshima
+ANSWER: C
+
+Q2: What is the capital of Canada?
+A) Toronto
+B) Vancouver
+C) Montreal
+D) Ottawa
+ANSWER: D
+
+Q3: What is the capital of Australia?
+A) Sydney
+B) Melbourne
+C) Canberra
+D) Brisbane
+ANSWER: C
+
+Q4: What is the capital of Brazil?
+A) Rio de Janeiro
+B) Sao Paulo
+C) Brasilia
+D) Salvador
+ANSWER: C
+
+Q5: What is the capital of Germany?
+A) Munich
+B) Frankfurt
+C) Hamburg
+D) Berlin
+ANSWER: D
+
+Q6: What is the capital of South Korea?
+A) Busan
+B) Incheon
+C) Seoul
+D) Daegu
+ANSWER: C
+
+Q7: What is the capital of Egypt?
+A) Alexandria
+B) Giza
+C) Cairo
+D) Luxor
+ANSWER: C
+
+Q8: What is the capital of Argentina?
+A) Cordoba
+B) Rosario
+C) Mendoza
+D) Buenos Aires
+ANSWER: D
+
+Q9: What is the capital of Spain?
+A) Barcelona
+B) Seville
+C) Valencia
+D) Madrid
+ANSWER: D
+
+Q10: What is the capital of Switzerland?
+A) Zurich
+B) Geneva
+C) Bern
+D) Lausanne
+ANSWER: C

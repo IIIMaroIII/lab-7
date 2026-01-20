@@ -1,0 +1,69 @@
+Q1: What is the primary goal of design patterns?
+A) To reduce code size
+B) To improve execution speed
+C) To provide reusable solutions to common design problems
+D) To replace documentation
+ANSWER: C
+
+Q2: Which design pattern ensures that a class has only one instance?
+A) Factory
+B) Singleton
+C) Builder
+D) Adapter
+ANSWER: B
+
+Q3: Which pattern is best suited for creating families of related objects?
+A) Prototype
+B) Singleton
+C) Abstract Factory
+D) Decorator
+ANSWER: C
+
+Q4: What problem does the Observer pattern solve?
+A) Object creation
+B) One-to-many dependency notification
+C) Object cloning
+D) Thread synchronization
+ANSWER: B
+
+Q5: Which pattern allows behavior to be selected at runtime?
+A) State
+B) Strategy
+C) Template Method
+D) Proxy
+ANSWER: B
+
+Q6: Which pattern provides a simplified interface to a complex subsystem?
+A) Adapter
+B) Facade
+C) Bridge
+D) Composite
+ANSWER: B
+
+Q7: What is the main purpose of the Decorator pattern?
+A) To modify source code
+B) To extend behavior dynamically
+C) To enforce inheritance
+D) To optimize memory
+ANSWER: B
+
+Q8: Which pattern encapsulates a request as an object?
+A) Command
+B) Observer
+C) Mediator
+D) Flyweight
+ANSWER: A
+
+Q9: Which pattern is commonly used to represent hierarchical structures?
+A) Strategy
+B) Composite
+C) Factory Method
+D) Singleton
+ANSWER: B
+
+Q10: Which pattern separates abstraction from implementation?
+A) Adapter
+B) Bridge
+C) Proxy
+D) Builder
+ANSWER: B

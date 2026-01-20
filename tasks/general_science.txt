@@ -1,0 +1,69 @@
+Q1: What is the chemical symbol for water?
+A) CO2
+B) O2
+C) H2O
+D) H2
+ANSWER: C
+
+Q2: Which planet is known as the Red Planet?
+A) Venus
+B) Mars
+C) Jupiter
+D) Mercury
+ANSWER: B
+
+Q3: What gas do plants absorb from the atmosphere?
+A) Oxygen
+B) Nitrogen
+C) Carbon dioxide
+D) Hydrogen
+ANSWER: C
+
+Q4: What force keeps planets in orbit around the Sun?
+A) Magnetism
+B) Friction
+C) Gravity
+D) Radiation
+ANSWER: C
+
+Q5: What is the basic unit of life?
+A) Atom
+B) Molecule
+C) Cell
+D) Organ
+ANSWER: C
+
+Q6: Which part of the human body controls balance?
+A) Heart
+B) Cerebellum
+C) Lungs
+D) Liver
+ANSWER: B
+
+Q7: What is the speed of light closest to?
+A) 30,000 km/s
+B) 300,000 km/s
+C) 3,000 km/s
+D) 3,000,000 km/s
+ANSWER: B
+
+Q8: What type of energy is stored in food?
+A) Thermal
+B) Kinetic
+C) Chemical
+D) Electrical
+ANSWER: C
+
+Q9: Which organ is responsible for pumping blood?
+A) Brain
+B) Lungs
+C) Heart
+D) Kidney
+ANSWER: C
+
+Q10: What does DNA stand for?
+A) Dynamic Nuclear Acid
+B) Deoxyribonucleic Acid
+C) Double Nitrogen Atom
+D) Deoxidized Nucleic Agent
+ANSWER: B
