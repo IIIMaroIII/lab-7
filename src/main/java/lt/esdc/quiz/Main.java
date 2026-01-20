@@ -1,0 +1,41 @@
+package lt.esdc.quiz;
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Reader reader = new Reader();
+        try {
+            while (true) {
+                FileProcessor fileProcessor = new FileProcessor();
+                OutputService.printWelcomeToQuiz();
+                String themeChoice = reader.readLine();
+                switch (themeChoice) {
+                    case "1" -> fileProcessor.findFile("quiz.txt");
+                    case "2" -> fileProcessor.findFile("design_patterns.txt");
+                    case "3" -> fileProcessor.findFile("general_science.txt");
+                    case "4" -> fileProcessor.findFile("capitals.txt");
+                    default -> System.exit(0);
+                }
+
+                fileProcessor.extractFileContent(fileProcessor.getPath()).categorizeFileContent();
+                List<String> onlyQuestions = fileProcessor.getOnlyQuestions();
+                List<String> onlyAnswers = fileProcessor.getOnlyAnswers();
+                List<String> onlyCorrectAnswers = fileProcessor.getOnlyCorrectAnswers();
+//            OutputService.printList(onlyQuestions);
+//            OutputService.printList(onlyAnswers);
+                QuizFlow quizFlow = new QuizFlow(onlyQuestions, onlyAnswers, onlyCorrectAnswers);
+                quizFlow.start();
+                OutputService.printEndingQuiz();
+                String againChoice = reader.readLine();
+                if (againChoice.equalsIgnoreCase("0")) break;
+                continue;
+            }
+
+        } catch (QuizException ex) {
+            System.err.println(ex.getMessage());
+        }
+
+    }
+}
