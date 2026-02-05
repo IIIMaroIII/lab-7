@@ -8,8 +8,6 @@ import java.util.List;
 
 public class FileProcessor {
     private final Reader reader = new Reader();
-    private final Writer writer = new Writer();
-    private final Parser parser = new Parser();
     private Path path;
 
     private List<String> fileContent;

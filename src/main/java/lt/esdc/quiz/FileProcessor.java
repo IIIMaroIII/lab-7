@@ -86,13 +86,6 @@ public class FileProcessor {
         this.correctAnswers = clearQuestions;
     }
 
-//    public void readFile() throws QuizException {
-//        Validator.validatePath(this.path);
-//        List<String> list = reader.readAllLines(this.path);
-//        Validator.validateList(list);
-//        this.fileContent = list;
-//    }
-
     public void writeResults(String suffix, String ext, String... args) throws QuizException {
         Validator.validatePath(this.path);
         Path newPath = createPathForNewFile(this.path, suffix, ext);

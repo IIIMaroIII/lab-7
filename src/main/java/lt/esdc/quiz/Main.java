@@ -36,7 +36,7 @@ public class Main {
                         quizFlow.formatLine(" Total wrong answers: " + quizFlow.getWrongAnswers()
                                 , " ❌ ", 1);
                 String right =
-                        quizFlow.formatLine(" Total correct answers: " + quizFlow.getRightAnswers(), " ✅ ", 1);
+                        quizFlow.formatLine(" Total co8rrect answers: " + quizFlow.getRightAnswers(), " ✅ ", 1);
                 fileProcessor.writeResults("", "", wrong, right);
 
                 String againChoice = reader.readLine();
